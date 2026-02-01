@@ -151,6 +151,7 @@ class BotPlayer:
         elif self.state == 8:
             shop_pos = self.find_nearest_tile(controller, bx, by, "SHOP")
             sx, sy = shop_pos
+            print("sx: ", sx, "sy: ", sy)
             if self.move_towards(controller, bot_id, sx, sy):
                 if controller.get_team_money() >= ShopCosts.PLATE.buy_cost:
                     if controller.buy(bot_id, ShopCosts.PLATE, sx, sy):
